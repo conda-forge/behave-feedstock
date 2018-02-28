@@ -1,6 +1,6 @@
 {% set name = "behave" %}
-{% set version = "1.2.5" %}
-{% set sha256 = "81b731ac5187e31e4aad2594944fa914943683a9818320846d037c5ebd6d5d0b" %}
+{% set version = "1.2.6" %}
+{% set sha256 = "b9662327aa53294c1351b0a9c369093ccec1d21026f050c3bd9b3e5cccf81a86" %}
 
 package:
   name: {{ name|lower }}
