@@ -27,6 +27,7 @@ requirements:
     - parse >=1.6.3
     - parse_type >=0.3.4
     - six
+    - traceback2  # [py27]
 
 test:
   imports:
