@@ -20,9 +20,9 @@ build:
 
 requirements:
   host:
-    - setuptools
-
     - python >=3.6
+    - setuptools <58   # because of https://github.com/behave/behave/issues/955
+                       # which will be released with 1.2.7
     - pip
   run:
     - python >=3.6
