@@ -12,22 +12,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1004
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - behave = behave.__main__:main
 
 requirements:
   host:
-    - python
-    - setuptools
-
+    - python >=3.6
+    - setuptools <58   # because of https://github.com/behave/behave/issues/955
+                       # which will be released with 1.2.7
+    - pip
   run:
-    - python
+    - python >=3.6
     - parse >=1.6.3
     - parse_type >=0.3.4
     - six
-    - traceback2  # [py27]
 
 test:
   imports:
