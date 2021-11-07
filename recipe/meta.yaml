@@ -13,21 +13,22 @@ source:
 
 build:
   number: 1004
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - behave = behave.__main__:main
 
 requirements:
   host:
-    - python
     - setuptools
 
+    - python >=3.6
+    - pip
   run:
-    - python
+    - python >=3.6
     - parse >=1.6.3
     - parse_type >=0.3.4
     - six
-    - traceback2  # [py27]
 
 test:
   imports:
