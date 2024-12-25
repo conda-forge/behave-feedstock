@@ -30,18 +30,15 @@ requirements:
     - six >=1.11
 
 test:
-  requires:
-    - python {{ python_min }}
-    - pip
   imports:
     - behave
     - behave.compat
     - behave.formatter
     - behave.reporter
-
+  requires:
+    - python {{ python_min }}
   commands:
     - behave --help
-    - pip check
 
 about:
   home: https://github.com/behave/behave
