@@ -3,15 +3,15 @@ About behave-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/behave-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/behave/behave
+Home: https://github.com/behave/behave
 
 Package license: BSD-2-Clause
 
 Summary: behave is behaviour-driven development, Python style
 
-Development: http://github.com/behave/behave
+Development: https://github.com/behave/behave
 
-Documentation: http://pythonhosted.org/behave/
+Documentation: https://behave.readthedocs.io
 
 Behavior-driven development (or BDD) is an agile software development
 technique that encourages collaboration between developers, QA and

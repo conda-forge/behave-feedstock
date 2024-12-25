@@ -12,38 +12,36 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1005
+  number: 1006
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - behave = behave.__main__:main
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools <58   # because of https://github.com/behave/behave/issues/955
-                       # which will be released with 1.2.7
+    - setuptools <58   # because of https://github.com/behave/behave/issues/955 which will be released with 1.2.7
     - pip
   run:
     - python >={{ python_min }}
-    - parse >=1.6.3
-    - parse_type >=0.3.4
-    - six
+    - parse >=1.8.2
+    - parse_type >=0.4.2
+    - six >=1.11
 
 test:
-  requires:
-    - python {{ python_min }}
   imports:
     - behave
     - behave.compat
     - behave.formatter
     - behave.reporter
-
+  requires:
+    - python {{ python_min }}
   commands:
     - behave --help
 
 about:
-  home: http://github.com/behave/behave
+  home: https://github.com/behave/behave
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
@@ -55,8 +53,8 @@ about:
 
     behave uses tests written in a natural language style, backed up by Python
     code.
-  doc_url: http://pythonhosted.org/behave/
-  dev_url: http://github.com/behave/behave
+  doc_url: https://behave.readthedocs.io
+  dev_url: https://github.com/behave/behave
 
 extra:
   recipe-maintainers:
