@@ -21,8 +21,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools <58   # because of https://github.com/behave/behave/issues/955
-                       # which will be released with 1.2.7
+    - setuptools <58   # because of https://github.com/behave/behave/issues/955 which will be released with 1.2.7
     - pip
   run:
     - python >={{ python_min }}
