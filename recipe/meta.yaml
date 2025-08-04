@@ -25,9 +25,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - parse >=1.8.2
-    - parse_type >=0.4.2
-    - six >=1.11
+    - parse >=1.18.0
+    - parse_type >=0.6.0
+    - six >=1.15
+    - cucumber-tag-expressions >=4.1.0
 
 test:
   imports:
