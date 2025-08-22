@@ -36,7 +36,7 @@ requirements:
     - parse_type >=0.6.0
     - six >=1.15.0
     - colorama >=0.3.7
-    - if: match(python, ">=3.0") and match(python, "<3.11")
+    - if: match(python, ">=3.0") # and match(python, "<3.11")
       then: tomli >=1.1.0
     # Keep the package noarch but allow for the win only dep
     - if: linux
