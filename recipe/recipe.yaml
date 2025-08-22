@@ -30,14 +30,12 @@ requirements:
   run:
     - python >=${{ python_min }},<4.0
     - cucumber-tag-expressions >=4.1.0
-    - if: match(python, ">=3.8")
-      then: cucumber-expressions >=17.1.0
+    - cucumber-expressions >=17.1.0
     - parse >=1.18.0
     - parse_type >=0.6.0
     - six >=1.15.0
     - colorama >=0.3.7
-    - if: match(python, ">=3.0") # and match(python, "<3.11")
-      then: tomli >=1.1.0
+    - tomli >=1.1.0
     # Keep the package noarch but allow for the win only dep
     - if: linux
       then:
@@ -45,7 +43,7 @@ requirements:
     - if: osx
       then:
         - __osx
-    - if: win and match(python, "<=3.9")
+    - if: win
       then:
         - __win
         - win_unicode_console
